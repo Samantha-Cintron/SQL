@@ -1,0 +1,114 @@
+CREATE TABLE Actors (ID INTEGER PRIMARY KEY, Name TEXT, Birth_Year INTEGER, Birthplace TEXT);
+
+
+INSERT INTO Actors (Name, Birth_Year, Birthplace)
+
+VALUES ("JASON BATEMAN", 1996, "RYE,NY");
+INSERT INTO Actors  (Name, Birth_Year, Birthplace)
+
+VALUES ("CHRIS PRATT", 1979, "VIRGINA, MN");
+INSERT INTO Actors (Name, Birth_Year, Birthplace)
+
+VALUES ("WIONONA RIDER", 1971, "WINONA, MN");
+INSERT INTO Actors (Name, Birth_Year, Birthplace)
+
+VALUES ("DAVID HARBOUR", 1975, "WHITE PLAINS NY"); 
+INSERT INTO Actors (Name, Birth_Year, Birthplace)
+
+VALUES ("JENNIFER ANISTON", 1969, "LOS ANGELES, CA");
+INSERT INTO Actors (Name, Birth_Year, Birthplace)
+
+VALUES ("CHRIS EVANS", 1981, "BOSTON, MA");
+INSERT INTO Actors (Name, Birth_Year, Birthplace)
+
+VALUES ("JOHNNY DEPP", 1963, "OWENSBORROW, KY");
+INSERT INTO Actors (Name, Birth_Year, Birthplace)
+
+VALUES ("JENNIFER LAWRENCE", 1990, "LOUISVILLE, KY");
+INSERT INTO Actors (Name, Birth_Year, Birthplace)
+
+VALUES ("MARGOT ROBBIE", 1990, "DALBY, AUSTRAILIA");
+INSERT INTO Actors (Name, Birth_Year, Birthplace)
+
+VALUES ("LEONARDO DICAPRIO", 1974, "HOLLYWOOD, CA");
+INSERT INTO Actors(Name, Birth_Year, Birthplace)
+
+VALUES ("BRADLEY COOPER", 1975, "PHILLY, PA");
+INSERT INTO Actors (Name, Birth_Year, Birthplace)
+
+VALUES ("BEN AFFLECK", 1972, "BERKLEY, CA");
+INSERT INTO Actors (Name, Birth_Year, Birthplace)
+
+VALUES ("TOM HANKS", 1956, "CONCORD, CA");
+INSERT INTO Actors(Name, Birth_Year, Birthplace)
+
+VALUES ("JULIA ROBERTS", 1967, "SMYRNA, GA");
+INSERT INTO Actors(Name, Birth_Year, Birthplace)
+
+VALUES ("JENNA ORTEGA", 2002, "PALM DESERT, CA");
+INSERT INTO Actors (Name, Birth_Year, Birthplace)
+
+VALUES ("COURTNEY COX", 1964, "BIRMINGHAM, AL");
+INSERT INTO Actors (Name, Birth_Year, Birthplace)
+
+VALUES ("PENN BADGLEY", 1986, "BALTIMORE, MD");
+INSERT INTO Actors (Name, Birth_Year, Birthplace)
+
+VALUES ("BLAKE LIVELY", 1987, "LOS ANGELES, CA");
+INSERT INTO Actors (Name, Birth_Year, Birthplace)
+
+VALUES ("RYAN REYNOLDS", 1976, "VANCOVER, CANADA");
+INSERT INTO Actors (Name, Birth_Year, Birthplace)
+
+VALUES ("RYAN GOSLING", 1980, "LONDON, CANADA");
+INSERT INTO Actors(Name, Birth_Year, Birthplace)
+
+VALUES ("BRAD PITT", 1963, "SHAWNEE, OK");
+INSERT INTO Actors(Name, Birth_Year, Birthplace)
+
+VALUES ("ELIZABETH OLSEN", 1989, "LOS ANGELES, CA");
+INSERT INTO Actors (Name, Birth_Year, Birthplace)
+
+VALUES ("SHAY MITCHELL", 1987, "MISSISSAUGNA, CANADA");
+INSERT INTO Actors (Name, Birth_Year, Birthplace)
+
+VALUES ("LUCY HALE", 1989, "MEMPHIS, TN");
+
+CREATE TABLE Movies (ID INTEGER PRIMARY KEY, Title TEXT , Actor_ID INTEGER, CoStar_ID INTEGER);
+
+INSERT INTO Movies (title, actor_id, CoStar_id)
+
+VALUES ("Barbie", 9, 20);
+INSERT INTO Movies (title, actor_id, CoStar_id)
+
+VALUES ("Wolf of Wall Street", 10, 9);
+INSERT INTO Movies (title, actor_id, CoStar_id)
+
+VALUES ("Edward Scissorhands", 7, 3);
+INSERT INTO Movies (title, actor_id, CoStar_id)
+
+VALUES ("Silver Lining Playbook", 11, 8);
+INSERT INTO Movies(title, actor_id, CoStar_id)
+
+ VALUES ("Passengers", 8, 2);
+INSERT INTO Movies (title, actor_id, CoStar_id)
+
+VALUES ("End Game", 6, 2);
+INSERT INTO Movies (title, actor_id, CoStar_id)
+
+VALUES ("Deadpool 2", 19, 21);
+INSERT INTO Movies (title, actor_id, CoStar_id)
+
+VALUES ("Oceans 11", 14, 21);
+INSERT INTO Movies (title, actor_id, CoStar_id)
+
+VALUES ("The Switch", 1,5);
+INSERT INTO Movies (title, actor_id, CoStar_id)
+
+VALUES ("Air", 1, 12);
+
+SELECT a.name AS actor, movies.title AS movie_title ,b.name AS co_star FROM movies
+    JOIN actors a 
+    ON movies.actor_id = a.id
+    JOIN actors b
+    ON movies.costar_id = b.id
